@@ -2,6 +2,10 @@ import { TProduct } from '@/types/product'
 import { getDiscountedPrice } from '@/utils/getDiscountedPrice'
 import Image from 'next/image'
 import React from 'react'
+import { Button } from '../ui/button'
+import RatingStars from '../shared-components/rating-stars'
+import QuantityInput from './quantity-input'
+
 
 type Props = {
     product: TProduct
@@ -53,6 +57,19 @@ export default function SingleProductHero({ product }: Props) {
                         <p className='text-sm text-muted-foreground line-through'>Rs. {product.price}</p>
                         <span className='text-sm'>{product.discount}%</span>
                     </div>
+
+                    <section className='mt-4 flex items-center gap-2'>
+                        <RatingStars rating={product.avgRating} />
+                        <span>{product.avgRating}</span>
+                        <span className='text-muted-foreground'>({product.reviews.length})</span>
+                    </section>
+
+                    <QuantityInput />
+
+                    <section className='flex gap-3 mt-10'>
+                        <Button variant={'secondary'} size={'lg'} className='grow'>Buy Now</Button>
+                        <Button variant={'default'} size={'lg'} className='grow'>Add To Cart</Button>
+                    </section>
                 </div>
             </section>
         </main>
