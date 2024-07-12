@@ -6,6 +6,7 @@ import React from 'react'
 
 type Props = {
     product: TProduct,
+    // variant?: 'variant1' | 'variant2' | 'xyz'
 }
 
 export default function SingleProductCard({ product }: Props) {
