@@ -33,8 +33,10 @@ export default function Navbar({ }: Props) {
 
                 <section className='flex items-center gap-3'>
                     <Button variant="outline">Login</Button>
-                    <Button variant={'outline'} size={'icon'}>
-                        <CiShoppingCart size={24} />
+                    <Button variant={'outline'} size={'icon'} asChild>
+                        <Link href={'/customer/cart'}>
+                            <CiShoppingCart size={24} />
+                        </Link>
                     </Button>
                 </section>
             </section>
