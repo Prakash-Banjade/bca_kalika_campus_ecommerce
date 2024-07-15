@@ -1,4 +1,5 @@
 import CartItemsTable from '@/components/cart/cart-items-table'
+import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
 import React from 'react'
@@ -46,6 +47,9 @@ function OrderSummary() {
                 <section className='flex items-center justify-between gap-5'>
                     <h4>Total</h4>
                     <span>Rs. 610</span>
+                </section>
+                <section>
+                    <Button className='uppercase w-full mt-2'>Proceed to checkout</Button>
                 </section>
             </CardContent>
         </Card>
